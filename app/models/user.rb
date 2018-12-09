@@ -3,4 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # Associations
+  has_many :estates
+
+  # Validations
+  #validates :first_name, :last_name, :email, presence: true, format: { with: /\A([a-z \'\.']+)\z/i }
 end

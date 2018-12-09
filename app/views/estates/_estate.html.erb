@@ -1,0 +1,20 @@
+<div class="col-xs-12 col-sm-6">
+  <div class="card">
+    <div class="card-pictures" style="background-image: linear-gradient(-225deg, rgba(120,97,97,0.5) 0%, rgba(155,197,193,0.2) 50%), url(<%= image_path('betho_sky.jpg') %>)">
+
+      <h4><%= estate.name %></h4>
+      <%= link_to '', estate_path(estate), class: 'card-link' %>
+    </div>
+
+    <div class="card-description">
+      <div class="card-info">
+        <h3>
+          <%= estate.city %>
+        </h3>
+      </div>
+      <div class="card-user">
+         <%= image_tag ('thibaut.jpg'), class: "avatar"%>
+      </div>
+    </div>
+  </div>
+</div>
