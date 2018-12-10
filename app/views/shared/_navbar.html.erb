@@ -11,11 +11,14 @@
 
       <!-- Links when logged in -->
       <%= link_to "Offer", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "About", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "About", "/about", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Contact", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
+        <% if policy(Estate).create? %>
+        <%= link_to "Add an estate", new_estate_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <% end %>
         <div class="dropdown">
           <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">

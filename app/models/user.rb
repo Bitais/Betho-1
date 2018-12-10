@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :estates
 
   # Validations
-  #validates :first_name, :last_name, :email, presence: true, format: { with: /\A([a-z \'\.']+)\z/i }
+  validates :first_name, :last_name, :email, presence: true, format: { with: /\A([a-z \'\.']+)\z/i }
 end
