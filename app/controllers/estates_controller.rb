@@ -7,13 +7,14 @@ class EstatesController < ApplicationController
 
   def new
     @estate = Estate.new
-    authorize @estate
+    @estate.user = current_user
+    #authorize @estate
   end
 
   def create
     @estate = Estate.new(estate_params)
     @estate.user = current_user
-    authorize @estate
+    #authorize @estate
     if @estate.save
       redirect_to @estate, notice: 'Your estate was successfully created'
     else

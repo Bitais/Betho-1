@@ -3,12 +3,12 @@ class IncomesController < ApplicationController
 
   def new
     @income = estate.Income.new
-    authorize @income
+    #@authorize @income
   end
 
   def create
     @income = estate.incomes.new(income_params)
-    authorize @income
+   # authorize @income
     if @income.save
       redirect_to @income, notice: 'Your new income was successfully created'
     else
