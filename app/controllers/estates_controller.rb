@@ -7,7 +7,7 @@ class EstatesController < ApplicationController
 
   def new
     @estate = Estate.new
-    authorize @office
+    authorize @estate
   end
 
   def create

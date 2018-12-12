@@ -11,8 +11,16 @@
 }
 
 /* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+// .navbar-wagon-brand img {
+//   height: 50px;
+// }
+#logo {
+  h3 {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 36px;
+    color: #222222;
+    text-decoration: none;
+  }
 }
 
 /* User Avatar */
